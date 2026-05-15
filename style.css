@@ -1,0 +1,541 @@
+/* Core Structural Configurations */
+:root {
+    --dark-primary: #0a0f1d;
+    --dark-secondary: #111827;
+    --accent-blue: #2563eb;
+    --accent-blue-glow: rgba(37, 99, 235, 0.15);
+    --text-white: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border-color: #1f2937;
+    --bg-light-alt: #161e2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-primary);
+    color: var(--text-white);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-layout-section {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.bg-alt {
+    background-color: var(--dark-secondary);
+}
+
+.section-headline {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-headline::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-blue);
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+/* Navigation System Layout */
+.navbar {
+    background-color: rgba(10, 15, 29, 0.95);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+}
+
+.title-bold { font-weight: 700; color: #ffffff; }
+.title-light { font-weight: 300; color: var(--text-muted); }
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-menu a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-blue);
+}
+
+.btn-nav {
+    background-color: var(--accent-blue);
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: background 0.2s ease !important;
+}
+
+.btn-nav:hover {
+    background-color: #1d4ed8;
+    color: #ffffff !important;
+}
+
+/* Hero Portrait Grid Layout */
+.hero-section {
+    padding: 120px 0 80px 0;
+}
+
+.hero-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: var(--accent-blue-glow);
+    color: #60a5fa;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    margin-bottom: 25px;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.06em;
+    margin-bottom: 25px;
+}
+
+.phd-tag {
+    font-weight: 300;
+    color: var(--text-muted);
+}
+
+.hero-lead {
+    font-size: 1.15rem;
+    color: #d1d5db;
+    line-height: 1.65;
+    margin-bottom: 40px;
+}
+
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.social-tag {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: var(--dark-secondary);
+    transition: all 0.2s ease;
+}
+
+.social-tag:hover {
+    border-color: var(--accent-blue);
+    background-color: var(--dark-primary);
+}
+
+.hero-avatar-area {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-frame {
+    width: 320px;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Analytical Metrics Grid Layout */
+.metrics-bar {
+    background-color: var(--dark-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 40px 0;
+}
+
+.metrics-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.metric-num {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-white);
+    font-family: 'Fira Code', monospace;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* Dual-Track Progression Timeline */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.column-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.timeline-wrapper {
+    border-left: 2px solid var(--border-color);
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.timeline-card {
+    position: relative;
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    left: -41px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--dark-primary);
+    border: 2px solid var(--accent-blue);
+}
+
+.card-date {
+    display: block;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+    margin-bottom: 8px;
+}
+
+.card-role {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card-org {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.card-desc, .card-subtext {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+.edu-card::before {
+    border-color: #10b981; /* Emerald accents specify institutional education degrees */
+}
+
+.edu-card .card-date {
+    color: #10b981;
+}
+
+/* Scientific Portfolio Layout */
+.pub-block {
+    background-color: var(--dark-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.pub-type-heading {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    color: #f3f4f6;
+}
+
+.pub-entry {
+    margin-bottom: 30px;
+}
+
+.pub-entry:last-child {
+    margin-bottom: 0;
+}
+
+.pub-meta {
+    display: block;
+    font-size: 0.8rem;
+    font-family: 'Fira Code', monospace;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.pub-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: #e5e7eb;
+}
+
+.doi-link {
+    display: inline-block;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: 'Fira Code', monospace;
+}
+
+.doi-link:hover {
+    text-decoration: underline;
+}
+
+/* Governance & Institutional Layout Grid */
+.governance-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+}
+
+.gov-card {
+    background-color: var(--dark-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.gov-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.gov-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.gov-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.gov-sublist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.gov-sublist li {
+    font-size: 0.9rem;
+    font-family: 'Fira Code', monospace;
+    padding-left: 20px;
+    position: relative;
+}
+
+.gov-sublist li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+}
+
+.flex-gov {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.gov-box {
+    background-color: var(--dark-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.gov-box h5 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #e5e7eb;
+}
+
+.clean-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+.highlight-box {
+    border-left: 4px solid var(--accent-blue);
+    background-color: var(--bg-light-alt);
+}
+
+/* Certification Grid Layout Elements */
+.certs-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+}
+
+.cert-node {
+    background-color: var(--dark-primary);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* High Fidelity Footers Layout */
+.site-footer {
+    background-color: #030712;
+    border-top: 1px solid var(--border-color);
+    padding: 80px 0 40px 0;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-contact-block h3, .footer-references-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.coord {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+}
+
+.coord a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.ref-mini-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #4b5563;
+}
+
+/* Mobile Layout Configurations Override */
+@media (max-width: 1024px) {
+    .hero-container, .timeline-grid, .governance-grid, .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .metrics-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .hero-avatar-area {
+        order: -1;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+    }
+}
