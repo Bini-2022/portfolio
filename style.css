@@ -306,7 +306,7 @@ body {
 }
 
 .edu-card::before {
-    border-color: #10b981; /* Emerald accents specify institutional education degrees */
+    border-color: #10b981;
 }
 
 .edu-card .card-date {
@@ -468,6 +468,56 @@ body {
     line-height: 1.4;
 }
 
+/* Milestone Gallery Layout Configuration */
+.milestone-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.milestone-item {
+    max-width: 800px;
+    width: 100%;
+    background-color: var(--dark-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.milestone-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.milestone-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.milestone-caption {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.milestone-caption h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.milestone-caption p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-family: 'Fira Code', monospace;
+}
+
 /* High Fidelity Footers Layout */
 .site-footer {
     background-color: #030712;
@@ -537,5 +587,11 @@ body {
     }
     .hero-title {
         font-size: 2.8rem;
+    }
+    .milestone-item {
+        padding: 12px;
+    }
+    .milestone-caption h4 {
+        font-size: 1.1rem;
     }
 }
